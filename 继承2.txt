@@ -1,0 +1,22 @@
+public class Test {
+    public static void main(String args[]) {
+        A a=new A(2.5);
+        System.out.println(a.Area());
+    }
+}
+class S{
+    double r;
+   S(double i){
+        r=i;
+       System.out.println("yyy");
+    }
+}
+class A extends S{
+    A(double r){
+       super(r);
+        System.out.println("zzz");
+    }
+    public double Area(){
+        return Math.PI*r*r;
+    }
+}

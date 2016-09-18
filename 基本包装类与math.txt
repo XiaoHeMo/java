@@ -1,0 +1,31 @@
+import java.text.SimpleDateFormat;
+import java.util.*;
+import java.text.ParseException;
+public class TestInitial {
+    public static void main(String args[]) throws ParseException {
+//        Date today1=new Date();                    //Date系统类返回的是当前的北京时间
+//        System.out.println(today1);
+//        SimpleDateFormat sdf=new SimpleDateFormat("yyyy-mm-dd hh:mm:ss");//SimpleDateFormat相当于格式类
+//        String today2=sdf.format(today1);          //format函数将日期转换为指定格式的文本,parse函数的作用正好相反Cal
+//        System.out.println(today2);
+
+//          Calendar c=Calendar.getInstance();         //创建系统类Calendar的对象，因为它是抽象类，无法new对象
+//          int year=c.get(Calendar.YEAR);
+//          int month=c.get(Calendar.MONTH)+1;
+//          int day=c.get(Calendar.DAY_OF_MONTH);
+//          int hour=c.get(Calendar.HOUR_OF_DAY);
+//          int minute=c.get(Calendar.MINUTE);
+//          int second=c.get(Calendar.SECOND);
+//          System.out.println("当前时间是："+year+"-"+month+"-"+day+" "+hour+":"+minute+":"+second);
+
+        double a=12.81;
+        int b=(int)a;        //强制类型double转换为int
+        long c=Math.round(a);  //四舍五入法
+        double d=Math.floor(a);//返回小于参数的最大整数
+        double e=Math.ceil(a);  //返回大于参数的最小整数
+        double f=Math.random();  //产生0和1之间的随机小数
+        double g=(Math.random()*99); //产生0和99之间的随机小数
+        int h=(int)(Math.random()*99); // 产生0和99之间的随机整数
+        System.out.println(b+"\n"+c+"\n"+d+"\n"+e+"\n"+f+"\n"+g+"\n"+h);
+    }
+}

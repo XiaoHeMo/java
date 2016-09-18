@@ -1,0 +1,25 @@
+public class Mymain {
+    public static void main(String[] args) {
+        Father f=new Father();
+        Son s=new Son();
+        graSon g=new graSon();
+        f.hitC();
+        s.hitC();
+        g.hitC();
+    }
+}
+class Father{
+    public void hitC(){
+      System.out.println("Are you will hit me?");
+    }
+}
+class Son extends Father{
+    public void hitC(){
+        System.out.println("why you hit me without no reason?");
+    }
+}
+class graSon extends Father{
+public void hitC(){
+    System.out.println("I would run if you do it.");
+}
+        }

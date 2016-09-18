@@ -1,0 +1,46 @@
+public class TestInterface {
+    public static void main(String args[]) {
+        Cat c=new Cat("mimi","yellow");
+        Dog d=new Dog();
+        Lady p1=new Lady("liyi",c);
+        Lady p2=new Lady("wier",d);
+        p1.funs();
+        p2.funs();
+    }
+}
+class Animal{
+    public String name;
+    Animal(String name) {
+        this.name=name;
+    }
+    public void fun()
+    { System.out.println("基类Animal的函数");}
+}
+class Cat extends Animal{
+    public String eyecolor;
+    Cat(String n,String eyecolor){
+        super(n);
+        this.eyecolor=eyecolor;
+    }
+    public void fun()
+    {System.out.println("子类Cat的函数");}
+}
+class Dog extends Animal{
+    public String fulcolor;
+    Dog(){
+        super("wang");
+        fulcolor="white";
+    }
+    public void fun()
+    { System.out.println("子类Dog的函数");}
+}
+class Lady{
+    public String name;
+    public Animal pet;
+    Lady(String n,Animal p){
+        name=n;  pet=p;
+    }
+    public void funs(){
+        pet.fun();
+    }
+}

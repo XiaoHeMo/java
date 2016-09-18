@@ -1,0 +1,35 @@
+class Student {
+    int stuid;
+    String stuname;
+    String stuspecity;
+
+    public Student(int id, String name) {
+        stuid = id;
+        stuname = name;
+    }
+
+    public void fun1(String specity) {
+        stuspecity = specity;
+    }
+
+    public String toString() {
+        return stuid + "," + stuname + "," + stuspecity;
+    }
+}
+    public class Graduate extends Student {
+        String grasex;
+
+        public Graduate(int id, String name, String sex) {
+            super(id,name);
+            this.grasex = sex;
+        }
+        public void fun2() {
+
+            System.out.println(super.toString() + ","+grasex);
+        }
+        public static void main(String args[]) {
+            Graduate g = new Graduate(12, "zhangsan", "female");
+            g.fun1("conmmunication");
+            g.fun2();
+        }
+    }

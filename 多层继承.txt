@@ -1,0 +1,50 @@
+public class TestAny {
+    public static void main(String args[]) {
+        Worker w=new Worker("kekexili",19);
+        w.Work();
+       stuMaster stu=new stuMaster("secretary");
+        stu.Work();
+        stu.Meeting();
+        stu.Eat();
+        stu.Sleep();
+    }
+}
+class Human{
+    String name,sex,country;
+    int age;
+    public void Eat() { System.out.println("111");}
+    public void Sleep(){ System.out.println("222");}
+    public void Work(){ System.out.println("Everyone need to work.");}
+}
+class Student extends Human{
+    String school;
+    int stuid;
+    {
+        name="zhang";sex="female";country="France";age=19;school="ailiyisi";stuid=12;
+    }   //普通初始化块
+   public void Work(){
+       System.out.print("来自"+country+age+"岁的，在"+school+"读书，" +
+           "学号是"+stuid+"的" +name+"的工作是学习,");
+   }
+}
+class Worker extends Human{
+    String firm;
+    int wAge;
+    Worker(String fi,int wa){               //Worker(int ag,String na,String se,String cou,string fi,int w)
+       super.name="wang";super.sex="male";super.country="China";super.age=48;   /*super.age=ag;super.name=na;                        super.sex=se;也是对的写法，前提是父类没构函，子类的构函写法就比较自由。*/
+        firm=fi; wAge=wa;      //this.firm=fi也是对的
+    }
+    public void Work(){
+        System.out.println("来自"+country+age+"岁的，在"+firm+"工作了"+wAge+"年的"
+            +name+"的工作是折纸箱。");
+    }
+}
+class stuMaster extends Student{
+    String profession;
+    stuMaster(String p){
+        profession=p;
+    }
+    void Meeting(){
+        System.out.println("职位是"+profession+",他正在开会。");
+    }
+}

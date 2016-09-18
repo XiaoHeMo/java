@@ -1,0 +1,35 @@
+public class Outer {
+    private int a = 99;
+
+    public class Inner {
+        int b = 2;
+
+        public void test() {
+            System.out.println("访问外部类中的私有变量：" + a);
+            System.out.println("访问内部类中的变量：" + b);
+        }
+    }
+
+    public static void main(String args[]) {
+        Outer o = new Outer();
+        Inner i = o.new Inner();
+        i.test();
+    }
+}
+
+    //另一个程序示例
+// public class Outer {
+//    int c=34;
+//    public class Inner{
+//        int c=55;
+//        public void test(){
+//            System.out.println("外部类的变量："+ Outer.this.c);
+//            System.out.println("内部类的变量"+ c);
+//        }
+//    }
+//    public static void main(String args[]){
+//        Outer o=new Outer();
+//        Inner i=o.new Inner();
+//        i.test();
+//    }
+//}

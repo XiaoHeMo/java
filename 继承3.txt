@@ -1,0 +1,31 @@
+public class TestAny {
+    public static void main(String args[]) {
+        SubCar aodi=new SubCar("aodi",500000,2000);/*SubCar cc[]={new SubCar("baoma",200,500000),new SubCar("benchi",200,360000000)};*对象数组的使用/
+        aodi.drive();
+        aodi.speedChange(3700);
+        SubCar benchi=new SubCar("benchi",600000,5000);
+        benchi.drive();
+        benchi.speedChange(6300);
+    }
+}
+class Car {
+    String mark;
+
+    void drive() {
+        System.out.println("本车现在正在驾驶。");
+    }
+}
+class SubCar extends Car{
+    int price,speed;
+    SubCar(String m,int p,int s){
+        super.mark=m;
+        price=p;  speed=s;
+        System.out.println("本车的品牌是"+mark);
+        System.out.println(mark+"的价格是"+price);
+        System.out.println(mark+"原来的车速是"+speed);
+    }
+    void speedChange(int newspeed){
+       speed=newspeed;
+        System.out.println(mark+"现在的速度是"+speed);
+    }
+}

@@ -1,0 +1,24 @@
+public class Test {
+    public static void main(String args[]) {
+        C cc=new C();
+        cc.out1();
+        cc.out2();
+        System.out.println(cc.fun("abcde"));
+    }
+}
+abstract class B{
+    void out1(){
+        System.out.println("this is B");
+    }
+    abstract void out2();
+}
+class C extends B{
+    void out2(){
+        System.out.println("this is C");
+    }
+    String fun(String s){
+        String  str;
+        str=s;
+        return str;
+    }
+}
