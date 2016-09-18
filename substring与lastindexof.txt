@@ -1,0 +1,10 @@
+public class TestSubIndex {
+    public static void main(String args[]){
+        String str1=new String("http://www.taobao.com");//sString str1=""也可直接赋值
+        System.out.println("输出为："+str1.lastIndexOf("//"));
+        String str2=str1.substring(str1.lastIndexOf(".")+1);
+        System.out.println("输出为："+str2);
+    }
+}
+//lastIndexof是从尾端开始寻找该字符第一次出现的位置，返回的是数字；
+//substring是截取从该位置开始的字符串，返回的是字符串
