@@ -1,0 +1,26 @@
+public class TestInitial {
+    public static void main(String args[]){
+        Initial p=new Initial();
+        p.total();
+    }
+}
+class Initial{
+    String name;
+    int age;
+   static String sex;
+    Initial(){
+        name="zhangyi";
+        System.out.println("通过构造函数初始化name");
+    }
+    {
+        age=18;
+        System.out.println("通过普通初始化块初始化年龄age");
+    }
+    static{
+        sex="female";
+        System.out.println("通过静态初始化块初始化性别sex");
+    }
+    void total(){
+        System.out.println("姓名："+name+"年龄："+age+"性别："+sex);
+    }
+}

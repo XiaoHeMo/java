@@ -1,0 +1,28 @@
+import java.io.*;
+import java.util.*;
+class stdinout2{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        System.out.print("please input your name: ");
+        System.out.printf("Hello! %s!\n",input.next());   //这里就不能用println
+        System.out.print("please input a integer number: ");
+        System.out.printf("What you input is: %d!\n",input.nextInt());
+        System.out.print("please input a float number:");
+        System.out.println("the number is:"+input.nextFloat());
+    }
+}
+
+
+
+//import java.io.*;
+  //  public class stdinout1 {
+   //     public static void main(String args[]) throws IOException {
+     //       System.out.println("please input:");
+       //     byte[] buffer = new byte[512];
+         //   int count = System.in.read(buffer);
+           // System.out.println("Output(ACSII):");
+            //for (int i = 0; i < count; i++) {
+              //  System.out.println(" " + buffer[i]);
+            //}
+        //}
+    //}

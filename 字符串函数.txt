@@ -1,0 +1,26 @@
+public class TestString {
+    public static void main(String args[]){
+//    String str1="imooc";
+//    String str2="imooc";
+//    String str3=new String("imooc");
+//    String str4=new String("imooc");
+//        System.out.println(str1==str2);
+//        System.out.println(str1==str3);
+//        System.out.println(str3==str4);
+//        str1="hello"+str1;
+//        System.out.println(str1);
+
+//        StringBuilder  s1=new StringBuilder("hello,"); //StringBuilder与StringBuffer是类似的，没有太大差别
+//        s1.append("imooc520");
+//        System.out.println(s1);
+//        System.out.println(s1.length());
+//        s1.insert(11,"!");
+//        System.out.println(s1);
+
+          StringBuffer str=new StringBuffer("学习 JAVA 编程");
+          System.out.println("字符串长度："+str.length());
+          System.out.println("字符位置："+str.indexOf("编"));
+          System.out.println("字符位置："+str.lastIndexOf(" "));
+          System.out.println("截取的子字符串："+str.substring(3,7));
+   }
+}

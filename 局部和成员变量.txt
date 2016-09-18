@@ -1,0 +1,25 @@
+public class TestPhone {
+    public static void main(String args[]){
+        Telphone t=new Telphone(5,1,6);
+        t.call();
+        t.sentMessage();
+    }
+}
+class Telphone{
+    float screen;
+    float cpusize;
+    float neicun;
+    int Var;             //成员变量，默认值是0
+    Telphone(float s,float c,float n){
+        screen=s; cpusize=c; neicun=n;
+        System.out.println("属性是一个对象有什么，方法是一个对象能干什么!"+"\n"+screen+","+cpusize+","+neicun+"Var="+Var);
+    }
+    void call(){
+        int  var=22;              //局部变量，必须被初始化，无默认值
+        System.out.println("这是打电话的功能。"+var);
+    }
+    void sentMessage(){
+        int var=18;
+        System.out.println("这是发短信的功能。"+var);
+    }
+}

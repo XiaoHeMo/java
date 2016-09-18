@@ -1,0 +1,32 @@
+public class Mymain {
+    public static void main(String[] args) {
+        Animal a=new Animal("wangwang");
+        Cat c=new Cat("mimi","white");
+        Dog d=new Dog("caicai","black");
+
+        System.out.println(a instanceof Animal);    // instanceof的作用是判断其左边的是否是右边的类当中的实例
+        System.out.println(c instanceof Cat);
+        System.out.println(d instanceof Dog);
+        System.out.println(a instanceof Cat);
+    }
+    }
+class Animal{
+    public String name;
+    Animal(String name){
+        this.name=name;
+    }
+}
+class Cat extends Animal{
+   public String eyecolor;
+    Cat(String n,String c){
+        super(n);
+        eyecolor=c;
+    }
+}
+class Dog extends Animal{
+    public String fulcolor;
+    Dog(String n,String c){
+        super(n);
+        fulcolor=c;
+    }
+}

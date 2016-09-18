@@ -1,0 +1,32 @@
+public class TestInterface {
+    public static void main(String args[]){
+     D d=new D();
+        d.fun1();  d.fun2();  d.fun3();  d.fun4();
+    }
+}
+interface A {
+    public static final int a=100;
+    public abstract void fun1();
+}
+
+interface B extends A{
+    public static final int b=200;
+    public abstract void fun2();
+}
+abstract class C{
+public abstract void fun3();
+}
+class D extends C implements A,B{
+   public void fun1(){
+       System.out.println("接口A中的抽象方法实现了");
+    }
+    public void fun2(){
+        System.out.println("接口B中的抽象方法实现了");
+    }
+    public void fun3(){
+        System.out.println("父类C中的抽象方法实现了");
+    }
+    public static void fun4(){     //非静态方法可访问普通和静态变量，所以不加static也对
+        System.out.println("两个变量的值是："+a+"  "+b+“\n要是三个函数名一样，则在D类中旧只需实现一个”);
+    }
+}
